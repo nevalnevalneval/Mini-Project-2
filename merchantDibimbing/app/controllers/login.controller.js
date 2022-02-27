@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 function login(req, res) {
     let param = [req.body.username, req.body.password]
-    let selectQuery = `SELECT * FROM user where username = ? and password = ?`
+    let selectQuery = `SELECT * FROM merchant where username = ? and password = ?`
 
     db.query(selectQuery, param, function (error, results, fields) {
         if (error) throw error;
